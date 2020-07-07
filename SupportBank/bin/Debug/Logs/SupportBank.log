@@ -1,0 +1,15 @@
+2020-07-07 21:34:00.7862 Debug - SupportBank.Program: Running main method
+2020-07-07 21:34:01.0602 Error - SupportBank.Program: CsvHelper.TypeConversion.TypeConverterException: The conversion cannot be performed.
+    Text: 'One Cheeseburger'
+    MemberType: 
+    TypeConverter: 'CsvHelper.TypeConversion.SingleConverter'
+   at CsvHelper.TypeConversion.DefaultTypeConverter.ConvertFromString(String text, IReaderRow row, MemberMapData memberMapData)
+   at CsvHelper.TypeConversion.SingleConverter.ConvertFromString(String text, IReaderRow row, MemberMapData memberMapData)
+   at lambda_method(Closure )
+   at CsvHelper.Expressions.RecordCreator.Create[T]()
+   at CsvHelper.Expressions.RecordManager.Create[T]()
+   at CsvHelper.CsvReader.<GetRecords>d__63`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at SupportBank.Program.ParseFileToTransactions(String file) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 87
+   at SupportBank.Program.Main() in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 34

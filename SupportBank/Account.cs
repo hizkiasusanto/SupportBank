@@ -21,21 +21,21 @@ namespace SupportBank
             this.AccountBalance += transaction;
         }
         
-        public void SortTransactions(List<Transaction> transactions)
+        public void FilterTransactions(List<Transaction> transactions)
         {
             this.ListOfTransactions = transactions.FindAll(t =>
                 t.From.Equals(this.AccountHolder) || t.To.Equals(this.AccountHolder));
         }
 
-        public void SimulateTransactions(List<Transaction> transactions)
+        public void GetAccountBalance(List<Transaction> transactions)
         {
-            this.SortTransactions(transactions);
+            this.FilterTransactions(transactions);
             
-            var outgoingTransactions = this.ListOfTransactions.Where(t => t.From.Equals(this.AccountHolder));
-            var incomingTransactions = this.ListOfTransactions.Where(t => t.To.Equals(this.AccountHolder));
+            var debitTransactions = this.ListOfTransactions.Where(t => t.From.Equals(this.AccountHolder));
+            var creditTransactions = this.ListOfTransactions.Where(t => t.To.Equals(this.AccountHolder));
 
-            this.AccountBalance -= outgoingTransactions.Select(t => t.Amount).Sum();
-            this.AccountBalance += incomingTransactions.Select(t => t.Amount).Sum();
+            this.AccountBalance -= debitTransactions.Select(t => t.Amount).Sum();
+            this.AccountBalance += creditTransactions.Select(t => t.Amount).Sum();
         }
 
         public void Print()
