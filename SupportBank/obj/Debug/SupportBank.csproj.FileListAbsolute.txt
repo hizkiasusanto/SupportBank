@@ -1,0 +1,15 @@
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\SupportBank.exe
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\SupportBank.pdb
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\obj\Debug\SupportBank.csprojAssemblyReference.cache
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\obj\Debug\SupportBank.csproj.CoreCompileInputs.cache
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\obj\Debug\SupportBank.exe
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\obj\Debug\SupportBank.pdb
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\CsvHelper.dll
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\CsvHelper.xml
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\obj\Debug\SupportBank.csproj.CopyComplete
