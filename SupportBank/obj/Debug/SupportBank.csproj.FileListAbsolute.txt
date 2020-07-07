@@ -15,3 +15,7 @@ D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\System.Threading.Tas
 D:\Workspace\SoftwireWork\SupportBank\SupportBank\obj\Debug\SupportBank.csproj.CopyComplete
 D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\NLog.dll
 D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\NLog.xml
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Newtonsoft.Json.dll
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Newtonsoft.Json.xml
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\AutoMapper.dll
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\AutoMapper.xml

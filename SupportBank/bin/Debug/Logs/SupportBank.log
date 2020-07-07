@@ -4,3 +4,112 @@
 2020-07-07 23:21:15.7462 Warn - SupportBank.Program: Bad data found. Please fix this entry:Last Thursday,Sarah T,Dan W,Beers,5.42
 
 2020-07-07 23:21:15.7462 Info - SupportBank.Program: Ran successfully
+2020-07-07 23:25:45.9096 Info - SupportBank.Program: Running main method
+2020-07-07 23:25:46.0503 Fatal - SupportBank.Program: Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: D. Path '', line 0, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonReader.ReadAndMoveToContent()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at SupportBank.Program.Main() in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 39
+2020-07-07 23:28:31.2033 Info - SupportBank.Program: Running main method
+2020-07-07 23:29:19.8489 Info - SupportBank.Program: Running main method
+2020-07-07 23:29:59.8847 Info - SupportBank.Program: Running main method
+2020-07-07 23:58:01.3105 Info - SupportBank.Program: Running main method
+2020-07-07 23:58:01.5735 Info - SupportBank.Program: Ran successfully
+2020-07-07 23:59:33.2680 Info - SupportBank.Program: Running main method
+2020-07-07 23:59:58.2230 Info - SupportBank.Program: Running main method
+2020-07-08 00:10:48.6235 Info - SupportBank.Program: Running main method
+2020-07-08 00:11:30.0197 Info - SupportBank.Program: Ran successfully
+2020-07-08 00:18:25.5751 Info - SupportBank.Program: Running main method
+2020-07-08 00:18:25.9088 Fatal - SupportBank.Program: System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.ParseExact(String s, String format, DateTimeFormatInfo dtfi, DateTimeStyles style)
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at SupportBank.Transaction..ctor(String Date, String FromAccount, String ToAccount, String Narrative, Single Amount) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Transaction.cs:line 26
+   at Void .ctor(System.String, System.String, System.String, System.String, Single)(Object[] )
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObjectUsingCreatorWithParameters(JsonReader reader, JsonObjectContract contract, JsonProperty containerProperty, ObjectConstructor`1 creator, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.Linq.JToken.ToObject(Type objectType, JsonSerializer jsonSerializer)
+   at Newtonsoft.Json.Linq.JToken.ToObject(Type objectType)
+   at Newtonsoft.Json.Linq.JToken.ToObject[T]()
+   at SupportBank.Program.ParseFileToTransactions(String file) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 131
+   at SupportBank.Program.Main() in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 41
+2020-07-08 00:38:10.7483 Info - SupportBank.Program: Running main method
+2020-07-08 00:40:15.6792 Info - SupportBank.Program: Running main method
+2020-07-08 00:40:21.7813 Info - SupportBank.Program: Running main method
+2020-07-08 00:40:28.7997 Info - SupportBank.Program: Running main method
+2020-07-08 00:40:28.9947 Info - SupportBank.Program: Ran successfully
+2020-07-08 00:40:34.8421 Fatal - SupportBank.Program: System.NullReferenceException: Object reference not set to an instance of an object.
+   at SupportBank.Account.<FilterTransactions>b__5_0(Transaction t) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Account.cs:line 27
+   at System.Collections.Generic.List`1.FindAll(Predicate`1 match)
+   at SupportBank.Account.FilterTransactions(List`1 transactions) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Account.cs:line 26
+   at SupportBank.Account.GetAccountBalance(List`1 transactions) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Account.cs:line 32
+   at SupportBank.Program.ListAll(List`1 transactionsList) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 148
+   at SupportBank.Program.PrintQueryCommandResult(String inputCommand, List`1 transactions) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 74
+   at SupportBank.Program.Main() in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 54
+2020-07-08 00:41:08.6242 Info - SupportBank.Program: Running main method
+2020-07-08 00:43:44.5557 Info - SupportBank.Program: Running main method
+2020-07-08 00:43:44.7107 Error - SupportBank.Program: System.InvalidOperationException: SupportBank.Transaction cannot be serialized because it does not have a parameterless constructor.
+   at System.Xml.Serialization.TypeDesc.CheckSupported()
+   at System.Xml.Serialization.TypeDesc.CheckSupported()
+   at System.Xml.Serialization.TypeScope.GetTypeDesc(Type type, MemberInfo source, Boolean directReference, Boolean throwOnError)
+   at System.Xml.Serialization.TypeScope.GetTypeDesc(Type type, MemberInfo source, Boolean directReference)
+   at System.Xml.Serialization.ModelScope.GetTypeModel(Type type, Boolean directReference)
+   at System.Xml.Serialization.ModelScope.GetTypeModel(Type type)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(Type type, XmlRootAttribute root, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type)
+   at SupportBank.Program.DeserializeXMLFileToObject[T](String XmlFilename) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 165
+2020-07-08 00:44:55.9093 Info - SupportBank.Program: Running main method
+2020-07-08 00:44:56.1652 Warn - SupportBank.Program: Bad data found. Please fix this entry:01/03/2015,Ben B,Sam N,Lunch,One Cheeseburger
+
+2020-07-08 00:44:56.1944 Warn - SupportBank.Program: Bad data found. Please fix this entry:Last Thursday,Sarah T,Dan W,Beers,5.42
+
+2020-07-08 00:44:56.1944 Info - SupportBank.Program: Ran successfully
+2020-07-08 00:45:07.1376 Info - SupportBank.Program: Running main method
+2020-07-08 00:45:07.3604 Info - SupportBank.Program: Ran successfully
+2020-07-08 00:48:41.0325 Info - SupportBank.Program: Running main method
+2020-07-08 00:48:41.2321 Info - SupportBank.Program: Ran successfully
+2020-07-08 00:49:54.0773 Info - SupportBank.Program: Running main method
+2020-07-08 00:49:54.2739 Info - SupportBank.Program: Ran successfully
+2020-07-08 01:01:10.3644 Info - SupportBank.Program: Running main method
+2020-07-08 01:25:02.0127 Info - SupportBank.Program: Running main method
+2020-07-08 01:25:48.6626 Info - SupportBank.Program: Running main method
+2020-07-08 01:25:59.8349 Fatal - SupportBank.Program: System.InvalidOperationException: There is an error in XML document (3, 4). ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at SupportBank.XmlTransaction..ctor() in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Transaction.cs:line 62
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderTransactionList.Read2_XmlTransaction(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderTransactionList.Read3_TransactionList(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderTransactionList.Read4_TransactionList()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(TextReader textReader)
+   at SupportBank.Program.ParseFileToTransactions(String file) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 129
+   at SupportBank.Program.Main() in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 40
+2020-07-08 01:42:51.3231 Info - SupportBank.Program: Running main method
+2020-07-08 01:42:51.4271 Fatal - SupportBank.Program: System.IO.FileNotFoundException: Could not find file 'D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Transactions2014.json'.
+File name: 'D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Transactions2014.json'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Boolean detectEncodingFromByteOrderMarks)
+   at System.IO.StreamReader..ctor(String path)
+   at SupportBank.Program.ParseFileToTransactions(String file) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 101
+   at SupportBank.Program.Main() in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 32
+2020-07-08 01:43:03.1015 Info - SupportBank.Program: Running main method
+2020-07-08 01:43:21.8911 Info - SupportBank.Program: Running main method
+2020-07-08 01:43:22.0891 Info - SupportBank.Program: Ran successfully
+2020-07-08 01:43:25.7935 Info - SupportBank.Program: Running main method
+2020-07-08 01:43:25.9855 Info - SupportBank.Program: Ran successfully

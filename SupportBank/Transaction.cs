@@ -1,15 +1,16 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace SupportBank
 {
     public class Transaction
     {
-        public DateTime Date { get; set; } 
-        public string From { get; set; }
-        public string To { get; set; }
-        public string Narrative { get; set; }
-        public float Amount { get; set; }
-            
+        [JsonProperty("Date")] public DateTime Date { get; set; }
+        [JsonProperty("FromAccount")] public string From { get; set; }
+        [JsonProperty("ToAccount")] public string To { get; set; }
+        [JsonProperty("Narrative")] public string Narrative { get; set; }
+        [JsonProperty("Amount")] public float Amount { get; set; }
+
         public Transaction(DateTime Date, string From, string To, string Narrative, float Amount)
         {
             this.Date = Date;

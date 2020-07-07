@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.PerformanceData;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Xml;
 using CsvHelper;
-using CsvHelper.TypeConversion;
+using Newtonsoft.Json;
 using NLog;
 using NLog.Config;
 using NLog.Targets;
+using System.Xml.Serialization;
 
 namespace SupportBank
 {
@@ -19,25 +20,17 @@ namespace SupportBank
         public static void Main()
         {
             var path = Directory.GetCurrentDirectory();
-            var config = new LoggingConfiguration();
-            var target = new FileTarget
-            {
-                FileName = Path.Combine(path, @"Logs\SupportBank.log"),
-                Layout = @"${longdate} ${level} - ${logger}: ${message}"
-            };
-            config.AddTarget("File Logger", target);
-            config.LoggingRules.Add(new LoggingRule("*", LogLevel.Debug, target));
-            LogManager.Configuration = config;
+            
+            InitializeLogger(path);
 
             try
             {
                 logger.Info("Running main method");
 
-                var files = Directory.EnumerateFiles(path, "*.csv");
-                var file = files.First();
+                var file = Path.Combine(path, @"Transactions2013.json");
 
                 var transactions = ParseFileToTransactions(file);
-                
+
                 logger.Info("Ran successfully");
 
                 while (true)
@@ -55,6 +48,19 @@ namespace SupportBank
             }
         }
 
+        private static void InitializeLogger(string path)
+        {
+            var config = new LoggingConfiguration();
+            var target = new FileTarget
+            {
+                FileName = Path.Combine(path, @"Logs\SupportBank.log"),
+                Layout = @"${longdate} ${level} - ${logger}: ${message}"
+            };
+            config.AddTarget("File Logger", target);
+            config.LoggingRules.Add(new LoggingRule("*", LogLevel.Debug, target));
+            LogManager.Configuration = config;
+        }
+
         private static void PrintQueryCommandResult(string inputCommand, List<Transaction> transactions)
         {
             var distinctNames = transactions
@@ -63,7 +69,7 @@ namespace SupportBank
                     .Select(t => t.To))
                 .Distinct()
                 .ToList();
-            
+
             if (inputCommand.Equals("List All"))
             {
                 var accountsList = ListAll(transactions);
@@ -93,25 +99,39 @@ namespace SupportBank
         public static List<Transaction> ParseFileToTransactions(string file)
         {
             StreamReader reader = new StreamReader(file);
-            var csv = new CsvReader(reader, new CultureInfo("en-GB"));
 
             List<Transaction> transactions = new List<Transaction>();
-            
-            while (csv.Read())
-            {
-                try
-                {
-                    transactions.Add(csv.GetRecord<Transaction>());
-                }
 
-                catch (Exception ex)
+            if (file.EndsWith(".csv"))
+            {
+                var csv = new CsvReader(reader, new CultureInfo("en-GB"));
+
+                while (csv.Read())
                 {
-                    logger.Warn("Bad data found. Please fix this entry:" + csv.Parser.Context.RawRecord);
-                    Console.Write("Bad data found. Please fix this entry:");
-                    Console.Write(csv.Parser.Context.RawRecord);
+                    try
+                    {
+                        transactions.Add(csv.GetRecord<Transaction>());
+                    }
+
+                    catch (Exception ex)
+                    {
+                        logger.Warn("Bad data found. Please fix this entry:" + csv.Parser.Context.RawRecord);
+                        Console.Write("Bad data found. Please fix this entry:");
+                        Console.Write(csv.Parser.Context.RawRecord);
+                    }
                 }
             }
-            
+
+            else if (file.EndsWith(".json"))
+            {
+                string json = reader.ReadToEnd();
+                transactions = JsonConvert.DeserializeObject<List<Transaction>>(json);
+            }
+
+            else if (file.EndsWith(".xml"))
+            {
+            }
+
             return transactions;
         }
 
