@@ -18,5 +18,15 @@ namespace SupportBank
             this.Narrative = Narrative;
             this.Amount = Amount;
         }
+
+        public void Print()
+        {
+            Console.WriteLine("Date: " + this.Date);
+            Console.WriteLine("To: " + this.To);
+            Console.WriteLine("From: " + this.From);
+            Console.WriteLine("Narrative: " + this.Narrative);
+            Console.WriteLine("Amount: " + this.Amount);
+            Console.WriteLine();
+        }
     }
 }
