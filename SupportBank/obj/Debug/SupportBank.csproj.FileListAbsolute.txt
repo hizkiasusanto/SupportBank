@@ -19,3 +19,11 @@ D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Newtonsoft.Json.dll
 D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Newtonsoft.Json.xml
 D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\AutoMapper.dll
 D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\AutoMapper.xml
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\ServiceStack.Text.dll
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\System.Buffers.dll
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\System.Memory.dll
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\System.Numerics.Vectors.dll
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\ServiceStack.Text.xml
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\System.Buffers.xml
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\System.Memory.xml
+D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\System.Numerics.Vectors.xml

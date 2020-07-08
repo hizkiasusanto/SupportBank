@@ -136,3 +136,61 @@ File name: 'D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Transact
 2020-07-08 16:47:31.1892 Info - SupportBank.Program: File parsed to list of transactions successfully
 2020-07-08 16:51:02.0471 Info - SupportBank.Program: Running main method
 2020-07-08 16:51:02.2741 Info - SupportBank.Program: File parsed to list of transactions successfully
+2020-07-08 16:55:30.0340 Info - SupportBank.Program: Running main method
+2020-07-08 17:00:36.1187 Info - SupportBank.Program: Running main method
+2020-07-08 17:21:49.7045 Info - SupportBank.Program: Running main method
+2020-07-08 18:35:18.4131 Info - SupportBank.Program: Running main method
+2020-07-08 18:35:18.4913 Info - SupportBank.XmlFinancialReader: File D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Transactions2012.xml parsed successfully without issues.
+2020-07-08 18:35:18.5381 Error - SupportBank.XmlFinancialReader: Error parsing XML file to transactions: D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Transactions2012.xml
+2020-07-08 18:35:18.5381 Info - SupportBank.Program: File parsed to list of transactions successfully
+2020-07-08 18:37:56.1220 Info - SupportBank.Program: Running main method
+2020-07-08 18:45:59.6179 Info - SupportBank.Program: Running main method
+2020-07-08 18:46:06.5587 Info - SupportBank.XmlFinancialReader: File D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Transactions2012.xml parsed successfully without issues.
+2020-07-08 18:46:06.5900 Warn - SupportBank.XmlFinancialReader: Bad data found in D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Transactions2012.xml: entry 4
+2020-07-08 18:51:30.1015 Info - SupportBank.Program: Running main method
+2020-07-08 18:51:30.1797 Info - SupportBank.XmlFinancialReader: File D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Transactions2012.xml parsed successfully without issues.
+2020-07-08 18:51:30.2266 Warn - SupportBank.XmlFinancialReader: Bad data found in D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Transactions2012.xml: entry 4
+2020-07-08 18:57:37.1619 Info - SupportBank.Program: Running main method
+2020-07-08 18:57:37.2400 Info - SupportBank.JsonFinancialReader: File D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Transactions2013.json parsed successfully without issues.
+2020-07-08 18:57:37.3182 Error - SupportBank.Program: Newtonsoft.Json.JsonReaderException: Error reading JObject from JsonReader. Current JsonReader item is not an object: StartArray. Path '', line 1, position 1.
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at SupportBank.JsonFinancialReader.Read(String file) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\JsonFinancialReader.cs:line 23
+   at SupportBank.Program.ParseFileToTransactions(String file) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 60
+   at SupportBank.Program.Main() in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 29
+2020-07-08 18:58:30.2099 Info - SupportBank.Program: Running main method
+2020-07-08 18:58:30.2723 Info - SupportBank.JsonFinancialReader: File D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Transactions2013.json parsed successfully without issues.
+2020-07-08 19:02:27.3282 Info - SupportBank.Program: Running main method
+2020-07-08 19:02:58.0319 Error - SupportBank.Program: Newtonsoft.Json.JsonReaderException: Error reading JObject from JsonReader. Current JsonReader item is not an object: StartArray. Path '', line 1, position 1.
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at SupportBank.JsonFinancialReader.Read(String file) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\JsonFinancialReader.cs:line 22
+   at SupportBank.Program.ParseFileToTransactions(String file) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 60
+   at SupportBank.Program.Main() in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 29
+2020-07-08 19:04:56.7998 Info - SupportBank.Program: Running main method
+2020-07-08 19:09:32.3746 Info - SupportBank.Program: Running main method
+2020-07-08 19:24:26.4187 Info - SupportBank.Program: Running main method
+2020-07-08 19:30:31.3691 Info - SupportBank.Program: Running main method
+2020-07-08 19:35:45.8542 Info - SupportBank.Program: Running main method
+2020-07-08 19:37:20.5160 Info - SupportBank.Program: Running main method
+2020-07-08 19:37:20.8285 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 19:37:20.8597 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 19:37:20.8910 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 19:38:43.2816 Info - SupportBank.Program: Running main method
+2020-07-08 19:38:43.5629 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 19:38:43.5941 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 19:38:43.6254 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 19:38:58.8666 Info - SupportBank.Program: Running main method
+2020-07-08 19:38:59.1322 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 19:38:59.1478 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 19:38:59.1791 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 19:39:56.6497 Info - SupportBank.Program: Running main method
+2020-07-08 19:39:56.9310 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 19:39:56.9622 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 19:39:56.9935 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 19:40:26.1814 Info - SupportBank.Program: Running main method
+2020-07-08 19:40:26.4469 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 19:40:26.4782 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 19:40:26.5094 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4

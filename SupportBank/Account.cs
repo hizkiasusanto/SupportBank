@@ -20,7 +20,7 @@ namespace SupportBank
         {
             this.AccountBalance += transaction;
         }
-        
+
         public void FilterTransactions(List<Transaction> transactions)
         {
             this.ListOfTransactions = transactions.FindAll(t =>
@@ -30,9 +30,11 @@ namespace SupportBank
         public void GetAccountBalance(List<Transaction> transactions)
         {
             this.FilterTransactions(transactions);
-            
-            var debitTransactions = this.ListOfTransactions.Where(t => t.From.Equals(this.AccountHolder));
-            var creditTransactions = this.ListOfTransactions.Where(t => t.To.Equals(this.AccountHolder));
+
+            var debitTransactions = this.ListOfTransactions.Where(
+                t => t.From.Equals(this.AccountHolder));
+            var creditTransactions = this.ListOfTransactions.Where(
+                t => t.To.Equals(this.AccountHolder));
 
             this.AccountBalance -= debitTransactions.Select(t => t.Amount).Sum();
             this.AccountBalance += creditTransactions.Select(t => t.Amount).Sum();
@@ -40,10 +42,9 @@ namespace SupportBank
 
         public void Print()
         {
-            Console.WriteLine("Account Holder: " + this.AccountHolder);
-            Console.WriteLine("Account Balance: " + this.AccountBalance);
+            Console.WriteLine($"Account Holder: {this.AccountHolder}");
+            Console.WriteLine($"Account Balance: {this.AccountBalance}");
             this.ListOfTransactions.ForEach(delegate(Transaction transaction) { transaction.Print(); });
         }
-        
     }
 }
