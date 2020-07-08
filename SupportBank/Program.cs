@@ -20,17 +20,23 @@ namespace SupportBank
                 var files = Directory.EnumerateFiles(@"FinancialRecords");
 
                 var transactions = new List<Transaction>();
+                
                 foreach (var file in files)
                 {
                     transactions.AddRange(FileParser.ParseFileToTransactions(file));
                 }
-
+                
+                transactions.Sort(
+                    delegate(Transaction transaction1, Transaction transaction2)
+                    {
+                        return transaction1.Date.CompareTo(transaction2.Date);
+                    }
+                );
+                
                 while (true)
                 {
                     Console.Write("\nEnter a command: ");
-
                     var inputCommand = Console.ReadLine();
-
                     QueryResponder.PrintQueryCommandResult(inputCommand, transactions);
                 }
             }

@@ -285,3 +285,31 @@ File name: 'D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Transact
 2020-07-08 20:21:35.2985 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
 2020-07-08 20:21:35.3258 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
 2020-07-08 20:21:35.3608 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 20:30:26.1305 Info - SupportBank.Program: Running main method
+2020-07-08 20:30:26.4175 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 20:30:26.4425 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 20:30:26.4776 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 20:31:00.5426 Error - SupportBank.Program: System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Exports\transactions.csv'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize)
+   at System.IO.StreamWriter..ctor(String path)
+   at SupportBank.CsvFinancialWriter.Write(List`1 transactions, String file) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\CsvFinancialWriter.cs:line 12
+   at SupportBank.FileExporter.ExportFile(List`1 transactions, String filename) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\FileExporter.cs:line 21
+   at SupportBank.QueryResponder.PrintQueryCommandResult(String inputCommand, List`1 transactions) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\QueryResponder.cs:line 34
+   at SupportBank.Program.Main() in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 34
+2020-07-08 20:31:25.9747 Info - SupportBank.Program: Running main method
+2020-07-08 20:31:26.2499 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 20:31:26.2780 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 20:31:26.3100 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 20:33:59.6354 Info - SupportBank.Program: Running main method
+2020-07-08 20:33:59.9010 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 20:33:59.9166 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 20:33:59.9478 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 20:41:31.9141 Info - SupportBank.Program: Running main method
+2020-07-08 20:41:32.0281 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 20:41:32.0281 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 20:41:32.0281 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
