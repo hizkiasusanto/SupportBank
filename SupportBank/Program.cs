@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Xml;
+using System.Xml.Linq;
 using CsvHelper;
 using Newtonsoft.Json;
 using NLog;
 using NLog.Config;
 using NLog.Targets;
-using System.Xml.Serialization;
 
 namespace SupportBank
 {
@@ -27,11 +26,11 @@ namespace SupportBank
             {
                 logger.Info("Running main method");
 
-                var file = Path.Combine(path, @"Transactions2013.json");
+                var file = Path.Combine(path, @"Transactions2014.csv");
 
                 var transactions = ParseFileToTransactions(file);
 
-                logger.Info("Ran successfully");
+                logger.Info("File parsed to list of transactions successfully");
 
                 while (true)
                 {
@@ -44,7 +43,7 @@ namespace SupportBank
             }
             catch (Exception ex)
             {
-                logger.Fatal(ex);
+                logger.Error(ex);
             }
         }
 
@@ -63,13 +62,6 @@ namespace SupportBank
 
         private static void PrintQueryCommandResult(string inputCommand, List<Transaction> transactions)
         {
-            var distinctNames = transactions
-                .Select(t => t.From)
-                .Concat(transactions
-                    .Select(t => t.To))
-                .Distinct()
-                .ToList();
-
             if (inputCommand.Equals("List All"))
             {
                 var accountsList = ListAll(transactions);
@@ -79,9 +71,9 @@ namespace SupportBank
             else if (inputCommand.StartsWith("List "))
             {
                 string name = inputCommand.Substring(5);
-                if (distinctNames.Contains(name))
+                var account = ListOne(name, transactions);
+                if (account.ListOfTransactions.Count != 0)
                 {
-                    var account = ListOne(name, transactions);
                     account.Print();
                 }
                 else
@@ -96,43 +88,97 @@ namespace SupportBank
             }
         }
 
-        public static List<Transaction> ParseFileToTransactions(string file)
+        private static List<Transaction> ParseFileToTransactions(string file)
         {
-            StreamReader reader = new StreamReader(file);
+            
 
             List<Transaction> transactions = new List<Transaction>();
 
             if (file.EndsWith(".csv"))
             {
-                var csv = new CsvReader(reader, new CultureInfo("en-GB"));
-
-                while (csv.Read())
-                {
-                    try
-                    {
-                        transactions.Add(csv.GetRecord<Transaction>());
-                    }
-
-                    catch (Exception ex)
-                    {
-                        logger.Warn("Bad data found. Please fix this entry:" + csv.Parser.Context.RawRecord);
-                        Console.Write("Bad data found. Please fix this entry:");
-                        Console.Write(csv.Parser.Context.RawRecord);
-                    }
-                }
+                ParseCsvToTransactions(file, transactions);
             }
 
             else if (file.EndsWith(".json"))
             {
-                string json = reader.ReadToEnd();
-                transactions = JsonConvert.DeserializeObject<List<Transaction>>(json);
+                ParseJsonToTransactions(file, transactions);
             }
 
             else if (file.EndsWith(".xml"))
             {
+                ParseXmlToTransactions(file, transactions);
             }
 
             return transactions;
+        }
+
+        private static void ParseXmlToTransactions(string file, List<Transaction> transactions)
+        {
+            StreamReader reader = new StreamReader(file);
+            string xml = reader.ReadToEnd();
+            XDocument xDoc = XDocument.Parse(xml);
+            
+            List<Transaction> tempTransactions = new List<Transaction>();
+
+            try
+            {
+                tempTransactions = (from element in xDoc.Descendants("TransactionList").Elements("SupportTransaction")
+                        select new Transaction(
+                            DateTime.FromOADate(Double.Parse(element.Attribute("Date").Value)),
+                            element.Element("Parties").Element("From").Value,
+                            element.Element("Parties").Element("To").Value,
+                            element.Element("Description").Value,
+                            float.Parse(element.Element("Value").Value))
+                    ).ToList();
+            }
+            catch
+            {
+                logger.Error("Error parsing XML file to transactions: " + file);
+            }
+            
+            transactions.AddRange(tempTransactions);
+        }
+
+        private static void ParseJsonToTransactions(string file, List<Transaction> transactions)
+        {
+            StreamReader reader = new StreamReader(file);
+            
+            List<Transaction> tempTransactions = new List<Transaction>();
+            try
+            {
+                string json = reader.ReadToEnd();
+                tempTransactions = JsonConvert.DeserializeObject<List<Transaction>>(json);
+            }
+            catch
+            {
+                logger.Error("Error parsing JSON file to transactions: " + file);
+            }
+
+            transactions.AddRange(tempTransactions);
+        }
+
+        private static void ParseCsvToTransactions(string file, List<Transaction> transactions)
+        {
+            StreamReader reader = new StreamReader(file);
+            var csv = new CsvReader(reader, new CultureInfo("en-GB"));
+
+            while (csv.Read())
+            {
+                try
+                {
+                    transactions.Add(csv.GetRecord<Transaction>());
+                }
+
+                catch
+                {
+                    logger.Error("Bad data found in " 
+                                + file + ". Please fix entry in row " 
+                                + csv.Parser.Context.Row + ":" + csv.Parser.Context.RawRecord);
+                    Console.Write("Bad data found in " 
+                                  + file + ". Please fix entry in row " 
+                                  + csv.Parser.Context.Row + ":" + csv.Parser.Context.RawRecord);
+                }
+            }
         }
 
         static List<Account> ListAll(List<Transaction> transactionsList)
@@ -140,7 +186,7 @@ namespace SupportBank
             var uniqueNames = transactionsList.Select(t => t.From).Concat(transactionsList.Select(t => t.To))
                 .Distinct();
 
-            var accounts = uniqueNames.Select(t => new Account(t, 0)).ToList();
+            var accounts = uniqueNames.Select(t => new Account(t)).ToList();
 
             foreach (Account account in accounts)
             {
