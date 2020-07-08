@@ -7,7 +7,7 @@ using NLog;
 
 namespace SupportBank
 {
-    public class CsvFinancialReader : IFinancialRecordReader
+    public class CsvFinancialReaderWriter : IFinancialRecordReaderWriter
     {
         private static readonly ILogger logger = LogManager.GetCurrentClassLogger();
 
@@ -35,6 +35,12 @@ namespace SupportBank
             }
 
             return transactions;
+        }
+        
+        public void Write(List<Transaction> transactions, string file)
+        {
+            var csvWriter = new StreamWriter(file);
+            new CsvWriter(csvWriter, new CultureInfo("en-GB")).WriteRecords(transactions);
         }
     }
 }

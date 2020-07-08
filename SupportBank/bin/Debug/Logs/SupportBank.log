@@ -313,3 +313,7 @@ File name: 'D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Transact
 2020-07-08 20:41:32.0281 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
 2020-07-08 20:41:32.0281 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
 2020-07-08 20:41:32.0281 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 21:11:47.8634 Info - SupportBank.Program: Running main method
+2020-07-08 21:11:48.1833 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 21:11:48.2163 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 21:11:48.2544 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4

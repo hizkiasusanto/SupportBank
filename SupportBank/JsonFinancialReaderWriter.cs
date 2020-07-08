@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NLog;
 
 namespace SupportBank
 {
-    public class JsonFinancialReader : IFinancialRecordReader
+    public class JsonFinancialReaderWriter : IFinancialRecordReaderWriter
     {
         private static readonly ILogger logger = LogManager.GetCurrentClassLogger();
 
@@ -33,6 +34,12 @@ namespace SupportBank
             }
 
             return transactions;
+        }
+        
+        public void Write(List<Transaction> transactions, string file)
+        {
+            File.WriteAllText(file,
+                JsonConvert.SerializeObject(transactions, Newtonsoft.Json.Formatting.Indented));
         }
     }
 }

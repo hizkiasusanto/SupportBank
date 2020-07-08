@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Xml;
 using System.Xml.Linq;
+using System.Xml.Serialization;
 using NLog;
 
 namespace SupportBank
 {
-    public class XmlFinancialReader : IFinancialRecordReader
+    public class XmlFinancialReaderWriter : IFinancialRecordReaderWriter
     {
         private static readonly ILogger logger = LogManager.GetCurrentClassLogger();
 
@@ -40,6 +42,13 @@ namespace SupportBank
             }
 
             return transactions;
+        }
+        
+        public void Write(List<Transaction> transactions, string file)
+        {
+            XmlWriter xmlWriter = XmlWriter.Create(file);
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Transaction>));
+            serializer.Serialize(xmlWriter, transactions);
         }
     }
 }

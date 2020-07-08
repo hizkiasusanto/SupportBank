@@ -2,8 +2,9 @@
 
 namespace SupportBank
 {
-    public interface IFinancialRecordReader
+    public interface IFinancialRecordReaderWriter
     {
         List<Transaction> Read(string file);
+        void Write(List<Transaction> transactions,string file);
     }
 }

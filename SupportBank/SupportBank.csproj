@@ -92,21 +92,16 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Account.cs" />
-        <Compile Include="CsvFinancialReader.cs" />
-        <Compile Include="CsvFinancialWriter.cs" />
-        <Compile Include="FileExporter.cs" />
-        <Compile Include="FileParser.cs" />
-        <Compile Include="IFinancialRecordReader.cs" />
-        <Compile Include="IFinancialRecordWriter.cs" />
-        <Compile Include="JsonFinancialReader.cs" />
-        <Compile Include="JsonFinancialWriter.cs" />
+        <Compile Include="CsvFinancialReaderWriter.cs" />
+        <Compile Include="FileReaderImportExport.cs" />
+        <Compile Include="IFinancialRecordReaderWriter.cs" />
+        <Compile Include="JsonFinancialReaderWriter.cs" />
         <Compile Include="QueryResponder.cs" />
         <Compile Include="LoggerInitializer.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Transaction.cs" />
-        <Compile Include="XmlFinancialReader.cs" />
-        <Compile Include="XmlFinancialWriter.cs" />
+        <Compile Include="XmlFinancialReaderWriter.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />

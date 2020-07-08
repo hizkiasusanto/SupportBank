@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using NLog;
 
 namespace SupportBank
@@ -23,16 +24,11 @@ namespace SupportBank
                 
                 foreach (var file in files)
                 {
-                    transactions.AddRange(FileParser.ParseFileToTransactions(file));
+                    transactions.AddRange(FileReaderImportExport.ParseFileToTransactions(file));
                 }
-                
-                transactions.Sort(
-                    delegate(Transaction transaction1, Transaction transaction2)
-                    {
-                        return transaction1.Date.CompareTo(transaction2.Date);
-                    }
-                );
-                
+
+                transactions = transactions.OrderBy(t => t.Date).ToList();
+
                 while (true)
                 {
                     Console.Write("\nEnter a command: ");
