@@ -194,3 +194,94 @@ File name: 'D:\Workspace\SoftwireWork\SupportBank\SupportBank\bin\Debug\Transact
 2020-07-08 19:40:26.4469 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
 2020-07-08 19:40:26.4782 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
 2020-07-08 19:40:26.5094 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 20:04:11.9412 Info - SupportBank.Program: Running main method
+2020-07-08 20:04:12.2224 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 20:04:12.2537 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 20:04:12.2850 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 20:05:38.5021 Error - SupportBank.Program: System.InvalidOperationException: SupportBank.Transaction cannot be serialized because it does not have a parameterless constructor.
+   at System.Xml.Serialization.TypeDesc.CheckSupported()
+   at System.Xml.Serialization.TypeDesc.CheckSupported()
+   at System.Xml.Serialization.TypeScope.GetTypeDesc(Type type, MemberInfo source, Boolean directReference, Boolean throwOnError)
+   at System.Xml.Serialization.TypeScope.GetTypeDesc(Type type, MemberInfo source, Boolean directReference)
+   at System.Xml.Serialization.ModelScope.GetTypeModel(Type type, Boolean directReference)
+   at System.Xml.Serialization.ModelScope.GetTypeModel(Type type)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(Type type, XmlRootAttribute root, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type)
+   at SupportBank.FileExporter.ExportFile(List`1 transactions, String filename) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\FileExporter.cs:line 34
+   at SupportBank.QueryResponder.PrintQueryCommandResult(String inputCommand, List`1 transactions) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\QueryResponder.cs:line 34
+   at SupportBank.Program.Main() in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 34
+2020-07-08 20:08:29.4280 Info - SupportBank.Program: Running main method
+2020-07-08 20:08:29.7092 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 20:08:29.7404 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 20:08:29.7717 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 20:10:55.5677 Info - SupportBank.Program: Running main method
+2020-07-08 20:10:55.8333 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 20:10:55.8646 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 20:10:55.8958 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 20:11:02.9936 Error - SupportBank.Program: System.InvalidOperationException: SupportBank.Transaction cannot be serialized because it does not have a parameterless constructor.
+   at System.Xml.Serialization.TypeDesc.CheckSupported()
+   at System.Xml.Serialization.TypeDesc.CheckSupported()
+   at System.Xml.Serialization.TypeScope.GetTypeDesc(Type type, MemberInfo source, Boolean directReference, Boolean throwOnError)
+   at System.Xml.Serialization.TypeScope.GetTypeDesc(Type type, MemberInfo source, Boolean directReference)
+   at System.Xml.Serialization.ModelScope.GetTypeModel(Type type, Boolean directReference)
+   at System.Xml.Serialization.ModelScope.GetTypeModel(Type type)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(Type type, XmlRootAttribute root, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type)
+   at SupportBank.FileExporter.ExportFile(List`1 transactions, String filename) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\FileExporter.cs:line 36
+   at SupportBank.QueryResponder.PrintQueryCommandResult(String inputCommand, List`1 transactions) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\QueryResponder.cs:line 34
+   at SupportBank.Program.Main() in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 34
+2020-07-08 20:12:07.0023 Info - SupportBank.Program: Running main method
+2020-07-08 20:12:07.2680 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 20:12:07.2992 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 20:12:07.3305 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 20:12:11.9709 Error - SupportBank.Program: System.InvalidOperationException: SupportBank.Transaction cannot be serialized because it does not have a parameterless constructor.
+   at System.Xml.Serialization.TypeDesc.CheckSupported()
+   at System.Xml.Serialization.TypeDesc.CheckSupported()
+   at System.Xml.Serialization.TypeScope.GetTypeDesc(Type type, MemberInfo source, Boolean directReference, Boolean throwOnError)
+   at System.Xml.Serialization.TypeScope.GetTypeDesc(Type type, MemberInfo source, Boolean directReference)
+   at System.Xml.Serialization.ModelScope.GetTypeModel(Type type, Boolean directReference)
+   at System.Xml.Serialization.ModelScope.GetTypeModel(Type type)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(Type type, XmlRootAttribute root, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type)
+   at SupportBank.FileExporter.ExportFile(List`1 transactions, String filename) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\FileExporter.cs:line 36
+   at SupportBank.QueryResponder.PrintQueryCommandResult(String inputCommand, List`1 transactions) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\QueryResponder.cs:line 34
+   at SupportBank.Program.Main() in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 34
+2020-07-08 20:15:27.6748 Info - SupportBank.Program: Running main method
+2020-07-08 20:15:27.9404 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 20:15:27.9717 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 20:15:28.0030 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 20:15:33.5151 Error - SupportBank.Program: System.InvalidOperationException: SupportBank.Transaction cannot be serialized because it does not have a parameterless constructor.
+   at System.Xml.Serialization.TypeDesc.CheckSupported()
+   at System.Xml.Serialization.TypeScope.GetTypeDesc(Type type, MemberInfo source, Boolean directReference, Boolean throwOnError)
+   at System.Xml.Serialization.TypeScope.GetTypeDesc(Type type, MemberInfo source, Boolean directReference)
+   at System.Xml.Serialization.ModelScope.GetTypeModel(Type type, Boolean directReference)
+   at System.Xml.Serialization.ModelScope.GetTypeModel(Type type)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(Type type, XmlRootAttribute root, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type)
+   at SupportBank.FileExporter.ExportFile(List`1 transactions, String filename) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\FileExporter.cs:line 36
+   at SupportBank.QueryResponder.PrintQueryCommandResult(String inputCommand, List`1 transactions) in D:\Workspace\SoftwireWork\SupportBank\SupportBank\QueryResponder.cs:line 34
+   at SupportBank.Program.Main() in D:\Workspace\SoftwireWork\SupportBank\SupportBank\Program.cs:line 34
+2020-07-08 20:16:31.3129 Info - SupportBank.Program: Running main method
+2020-07-08 20:16:31.5942 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 20:16:31.6098 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 20:16:31.6567 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 20:16:42.1567 Info - SupportBank.Program: Running main method
+2020-07-08 20:16:42.4379 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 20:16:42.4535 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 20:16:42.4848 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 20:18:37.0297 Info - SupportBank.Program: Running main method
+2020-07-08 20:18:37.3230 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 20:18:37.3502 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 20:18:37.3742 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 20:20:23.9333 Info - SupportBank.Program: Running main method
+2020-07-08 20:20:24.2150 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 20:20:24.2313 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 20:20:24.2736 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4
+2020-07-08 20:21:35.0146 Info - SupportBank.Program: Running main method
+2020-07-08 20:21:35.2985 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 28
+2020-07-08 20:21:35.3258 Warn - SupportBank.CsvFinancialReader: Bad data found in FinancialRecords\DodgyTransactions2015.csv: entry 52
+2020-07-08 20:21:35.3608 Warn - SupportBank.XmlFinancialReader: Bad data found in FinancialRecords\Transactions2012.xml: entry 4

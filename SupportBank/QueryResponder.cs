@@ -28,6 +28,11 @@ namespace SupportBank
                 }
             }
 
+            else if (inputCommand.StartsWith("Export File "))
+            {
+                string exportFilename = inputCommand.Substring(12);
+                new FileExporter().ExportFile(transactions, exportFilename);
+            }
             else
             {
                 Console.WriteLine("Invalid command");

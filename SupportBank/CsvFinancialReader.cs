@@ -4,7 +4,6 @@ using System.Globalization;
 using System.IO;
 using CsvHelper;
 using NLog;
-using NLog.Fluent;
 
 namespace SupportBank
 {

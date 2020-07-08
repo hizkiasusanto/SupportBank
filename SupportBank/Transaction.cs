@@ -10,6 +10,8 @@ namespace SupportBank
         [JsonProperty("ToAccount")] public string To { get; set; }
         [JsonProperty("Narrative")] public string Narrative { get; set; }
         [JsonProperty("Amount")] public float Amount { get; set; }
+        
+        private Transaction() {}
 
         public Transaction(DateTime Date, string From, string To, string Narrative, float Amount)
         {
